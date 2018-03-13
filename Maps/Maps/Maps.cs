@@ -6,25 +6,12 @@ namespace Maps
 {
 	public class App : Application
 	{
+		public static double ScreenHeight;
+		public static double ScreenWidth;
+
 		public App()
 		{
-			// The root page of your application
-			var content = new ContentPage
-			{
-				Title = "Maps",
-				Content = new StackLayout
-				{
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							HorizontalTextAlignment = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
-					}
-				}
-			};
-
-			MainPage = new NavigationPage(content);
+			MainPage = new MapPageCS ();
 		}
 
 		protected override void OnStart()
